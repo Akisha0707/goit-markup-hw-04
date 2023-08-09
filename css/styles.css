@@ -40,7 +40,8 @@ button {
 
 /* page-haeder */
 .page-header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -157,11 +158,11 @@ button {
 .tagline-section {
     padding: 188px 0;
     background: var(--navyblue, #2E2F42);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)), url(/images/people-office1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office1.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
+    max-width: 1440px;
 }
 
 .tagline {
@@ -195,6 +196,7 @@ button {
     min-width: 169px;
     height: 56px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -230,6 +232,16 @@ button {
 
 .qual-list {
     width: calc((100% - 72px) / 4);
+}
+
+.qual-list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .quality-icone {
@@ -309,6 +321,35 @@ button {
     width: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px;
     background: var(--white, #FFF);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    justify-content: center;
+}
+
+.social-icons {
+    background-color: #404bbf;
+}
+
+
+.social-list-icons {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-icons:hover,
+.social-list-icons:focus {
+    background-color: #404bbf;
+}
+
+.social-pages {
+    fill: #f4f4fd;
 }
 
 .employers_info {
@@ -334,8 +375,6 @@ button {
     text-align: center;
 }
 
-.social-icons {}
-
 .social {
     padding-left: 15px;
     display: flex;
@@ -346,19 +385,24 @@ button {
 /* section-customers */
 
 .customers-header {
-    color: var(--navyblue, #2E2F42);
+    color: var(--navyblue, #2e2f42);
     text-align: center;
-    font-family: Roboto;
     font-size: 36px;
     font-weight: 700;
-    line-height: 40px;
-    /* 111.111% */
-    letter-spacing: 0.72px;
+    line-height: 1.11;
+    margin-bottom: 72px;
     text-transform: capitalize;
+}
+
+.customers {
+    padding: 120px 0;
 }
 
 .customers-list {
     display: flex;
+    gap: 24px;
+
+
     padding-top: 72px;
     padding-bottom: 72px;
     align-items: center;
@@ -368,34 +412,44 @@ button {
 }
 
 .customers-element {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+
+.customers-href {
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
-    border: 1px solid var(--lightslate, #8E8F99);
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    color: #8e8f99;
+}
+
+.customers-herf:hover,
+.customers-herf:focus {
+    border-color: #404bbf;
+}
+
+.customers-img {
+    fill: currentColor;
 }
 
 /* page-footer */
 .page-footer {
     padding: 100px 0;
     background: var(--navyblue, #2E2F42);
-    display: flex;
-    padding-left: 15px;
 }
 
-.color_footer {
+.container_footer {
     background: var(--navyblue, #2E2F42);
     padding-top: 101px;
     padding-left: 40px;
     margin-left: 15px;
     margin-right: 120px;
-}
-
-.studios {
-    color: var(--navyblue, #f4f4fd);
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 21px;
-    letter-spacing: 0.54px;
-    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+    margin-right: 120px;
 }
 
 .logo_footer {
@@ -410,11 +464,24 @@ button {
     margin-bottom: 16px;
 }
 
+.studios {
+    color: var(--navyblue, #f4f4fd);
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 21px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
 .tag {
+    font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
-    color: var(--cloud, #F4F4FD);
+    color: var(--cloud, #FFFFFF);
     letter-spacing: 0.02em;
     width: 264px;
+    margin-bottom: 16px;
 }
 
 .social-header {
@@ -430,13 +497,36 @@ button {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 100px;
+    
 }
 
 .social-footer {
     display: flex;
-    flex-direction: row;
     gap: 16px;
+}
+
+.social-icons {
+    width: 40px;
+    height: 40px;
+}
+
+.social-pages {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris, #4d5ae5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-pages:hover,
+.social-pages:focus {
+    background-color: #31d0aa;
+}
+
+.social-list-icons {
+fill: #f4f4fd;
 }
 
 /**Portfolio**/
