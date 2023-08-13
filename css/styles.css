@@ -46,6 +46,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-nav {
@@ -119,6 +122,7 @@ button {
     background-color: #404bbf;
     border-radius: 2px;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .element:hover,
@@ -181,8 +185,11 @@ button {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office1.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+}
+
+.color-tagline {
     max-width: 1440px;
+    background-size: cover;
 }
 
 .tagline {
@@ -216,6 +223,7 @@ button {
     min-width: 169px;
     height: 56px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -378,7 +386,9 @@ button {
 .social-icons {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .social-list-icons {
@@ -389,6 +399,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-icons:hover,
@@ -416,17 +427,15 @@ button {
 .customers-list {
     display: flex;
     gap: 24px;
-    padding-top: 72px;
-    padding-bottom: 72px;
-    align-items: center;
+     align-items: center;
     justify-content: space-between;
-    margin-left: 156px;
-    margin-right: 156px;
-}
+   }
 
 .customers-element {
     width: calc((100% - 120px) / 6);
     height: 88px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-href {
@@ -442,6 +451,7 @@ button {
 .customers-herf:hover,
 .customers-herf:focus {
     border-color: #404bbf;
+    color: #404bbf;
 }
 
 .customers-img {
@@ -462,7 +472,6 @@ button {
     margin-right: 120px;
     display: flex;
     align-items: baseline;
-    margin-right: 120px;
 }
 
 .container-logo-p {
@@ -509,7 +518,7 @@ button {
 }
 
 .social-paragraph {
-    color: var(--white, #FFF);
+    color: var(--white, #FFFFFF);
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
@@ -546,6 +555,71 @@ button {
 .social-list-icons-footer {
     fill: #f4f4fd;
 }
+
+/* modal-pages */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 408px;
+    height: 584px;
+    background: #fcfcfc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.open-modal {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.open-modal:hover,
+.open-modal:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.btn-img {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-img:hover,
+.btn-img:focus {
+    fill: #FFFFFF
+}
+
 
 /**Portfolio**/
 
@@ -671,9 +745,14 @@ button {
     color: #FFFFFF;
     background-color: #404BBF;
     border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 2px 1px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+
+}
+
+.buttons-info {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image_services {
@@ -687,21 +766,24 @@ button {
 
 .img {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.img:hover, .backdrop-text,
-.img:focus, .backdrop-text {
-    transform: translateY(0);
+.img:hover,
+.backdrop-text,
+.img:focus,
+.backdrop-text {
+    transform: translateY(0%);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .backdrop-wraper {
     position: relative;
     overflow: hidden;
-    }
+}
 
 .backdrop-text {
-    color: var(--cloud, #F4F4FD);
+    color: var(--cloud, #f4f4fd);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -768,10 +850,16 @@ button {
     justify-content: space-between;
 }
 
+.wraper-portfolio-footer {
+    display: flex;
+    align-items: baseline;
+}
+
 .conclusion_footer {
     background: var(--navyblue, #2E2F42);
     padding-top: 101px;
     padding-left: 40px;
+    margin-right: 120px;
 }
 
 .tag_footer {
@@ -784,14 +872,13 @@ button {
     padding-right: 650px;
 }
 
-.social-header-portfolio {
+.social-paragraph-portfolio {
     color: var(--white, #FFF);
-        font-family: Roboto;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 .social-footer-portfolio {
@@ -803,6 +890,7 @@ button {
     width: 40px;
     height: 40px;
 }
+
 .social-pages-footer-portfolio {
     width: 100%;
     height: 100%;
