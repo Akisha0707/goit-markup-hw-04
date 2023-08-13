@@ -40,15 +40,15 @@ button {
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     max-width: 1440px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-nav {
@@ -185,11 +185,12 @@ button {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office1.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    max-width: 1440px;
+    background-size: cover;
 }
 
 .color-tagline {
-    max-width: 1440px;
-    background-size: cover;
+  
 }
 
 .tagline {
@@ -386,10 +387,7 @@ button {
 .social-icons {
     width: 40px;
     height: 40px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+ }
 
 .social-list-icons {
     width: 100%;
@@ -842,6 +840,7 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     padding-left: 150px;
+    padding-right: 76px;
 }
 
 .page-footer-container-portfolio {
