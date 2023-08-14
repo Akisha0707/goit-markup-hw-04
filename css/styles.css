@@ -49,6 +49,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .page-nav {
@@ -442,12 +443,11 @@ button {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-self: center;
     color: #8e8f99;
 }
 
-.customers-herf:hover,
-.customers-herf:focus {
+.customers-href:hover,
+.customers-href:focus {
     border-color: #404bbf;
     color: #404bbf;
 }
@@ -554,7 +554,7 @@ button {
     fill: #f4f4fd;
 }
 
-/* modal-pages */
+/* modal-btn */
 
 .backdrop {
     position: fixed;
