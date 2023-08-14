@@ -106,13 +106,13 @@ button {
     padding: 24px;
 }
 
-.element-studio {
+.current {
     position: relative;
     color: #404bbf;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.element-studio::after {
+.current::after {
     content: "";
     position: absolute;
     left: 0;
@@ -659,6 +659,7 @@ button {
 
 .studio-portfolio {
     color: var(--navyblue, #2e2f42);
+margin-right: 76px;
 }
 
 .info-portfolio {
@@ -669,24 +670,6 @@ button {
 
 .element-portfolio {
     padding: 24px 0;
-}
-
-.element-portfolio-site {
-    position: relative;
-    color: #404bbf;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.element-portfolio-site::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background-color: #404bbf;
-    border-radius: 2px;
-    display: block;
 }
 
 .info-contact-portfolio {
