@@ -81,7 +81,7 @@ button {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-left: 80px;
+
     margin-right: 76px;
 }
 
@@ -215,8 +215,6 @@ button {
     border-radius: 4px;
     display: block;
     margin-left: 450px;
-    padding-left: 32px;
-    padding-right: 32px;
     min-width: 169px;
     height: 56px;
     border: none;
@@ -463,10 +461,6 @@ button {
 }
 
 .container_footer {
-    padding-top: 101px;
-    padding-left: 40px;
-    margin-left: 15px;
-    margin-right: 120px;
     display: flex;
     align-items: baseline;
 }
@@ -498,23 +492,15 @@ button {
 }
 
 .tag {
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     color: var(--cloud, #FFFFFF);
     letter-spacing: 0.02em;
     width: 264px;
-    margin-bottom: 16px;
+
 }
 
-.social-info-footer {
-    margin-right: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.social-paragraph {
+.social-info-footer .social-paragraph {
     color: var(--white, #FFFFFF);
     font-size: 16px;
     font-weight: 500;
@@ -606,6 +592,28 @@ button {
     border: none;
 }
 
+.btn-close {
+    position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e7e9fc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close {
+    background-color: #404bbf;
+    border: none;
+}
+
 .btn-img {
     position: absolute;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -615,7 +623,6 @@ button {
 .btn-img:focus {
     fill: #FFFFFF
 }
-
 
 /**Portfolio**/
 
@@ -674,11 +681,6 @@ button {
     display: flex;
     align-items: flex-end;
     gap: 40px;
-}
-
-
-.adress-elem {
-    margin-right: 40px;
 }
 
 /* page-main-portfolio */
