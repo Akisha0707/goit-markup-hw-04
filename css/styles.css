@@ -803,16 +803,20 @@ button {
 /* page-footer-portfolio */
 
 .page-footer-container-portfolio {
+padding: 100px 0;
     background: var(--navyblue, #2E2F42);
-    display: flex;
 }
 
 .container-portfolio {
-    max-width: 1158px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 100px;
+    margin-left: 15px;
+    margin-right: 120px;
+    display: flex;
+    align-items: baseline;
+}
+
+.conclusion_footer {
+    margin-right: 120px;
 }
 
 .logo_portfolio {
@@ -827,27 +831,22 @@ button {
     padding-right: 76px;
 }
 
-.wraper-portfolio-footer {
-        padding-left: 100px;
-        margin-left: 15px;
-        margin-right: 120px;
-        display: flex;
-        align-items: baseline;
-}
-
-.conclusion_footer {
-       padding-top: 101px;
-}
-
 .tag_footer_portfolio {
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        color: var(--cloud, #FFFFFF);
-        letter-spacing: 0.02em;
-        width: 264px;
-        margin-bottom: 16px;
- }
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--cloud, #FFFFFF);
+    letter-spacing: 0.02em;
+    width: 264px;
+    margin-bottom: 16px;
+}
+
+.social-info-footer-portfolio {
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
 .social-paragraph-portfolio {
     color: var(--white, #FFF);
