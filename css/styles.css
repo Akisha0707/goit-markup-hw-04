@@ -456,6 +456,7 @@ button {
 }
 
 /* page-footer */
+
 .page-footer {
     padding: 100px 0;
     background: var(--navyblue, #2E2F42);
@@ -803,11 +804,11 @@ button {
 /* page-footer-portfolio */
 
 .page-footer-container-portfolio {
-padding: 100px 0;
+    padding: 100px 0;
     background: var(--navyblue, #2E2F42);
 }
 
-.container-portfolio {
+.container_portfolio {
     padding-left: 100px;
     margin-left: 15px;
     margin-right: 120px;
@@ -827,8 +828,8 @@ padding: 100px 0;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding-left: 150px;
-    padding-right: 76px;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .tag_footer_portfolio {
