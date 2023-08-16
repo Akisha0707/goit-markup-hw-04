@@ -574,35 +574,6 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.open-modal {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #e7e9fc;
-  background: #fcfcfc;
-}
-
-.open-modal:hover,
-.open-modal:focus {
-  background-color: #404bbf;
-  border: none;
-}
-.modal:hover,
-.modal:focus {
-  fill: #ffffff;
-}
-
 .btn-close {
   position: absolute;
   top: 24px;
@@ -620,13 +591,17 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.btn-close:hover,
+.btn-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
 .btn-img {
-  position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-img:hover .btn-img:focus {
+.btn-close:hover > .btn-img,
+.btn-close:focus > .btn-img {
   fill: #ffffff;
 }
 
@@ -719,13 +694,12 @@ button {
   justify-content: center;
 }
 
-.buttons-info {
+.buttons_info {
 }
 
 .modal-bt {
   color: var(--iris, #4d5ae5);
   background-color: var(--ocean, #f4f4fd);
-  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   border-radius: 4px;
@@ -744,7 +718,11 @@ button {
 
 .modal-bt:hover,
 .modal-bt:focus {
-  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--white, #fff);
+  background-color: var(--ocean, #404bbf);
+  border-color: var(--ocean, #404bbf);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .image_services {
