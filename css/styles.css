@@ -416,7 +416,7 @@ button {
   font-size: 36px;
   line-height: 1.11;
   margin-bottom: 72px;
-  align-items: center;
+  text-align: center;
 }
 
 .customers-list {
