@@ -135,7 +135,6 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -148,6 +147,7 @@ button {
   padding-bottom: 24px;
   padding-top: 24px;
   display: inline-block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
@@ -427,12 +427,9 @@ button {
 
 .customers-element {
   width: calc((100% - 120px) / 6);
-  width: 100%;
-  height: 100%;
   height: 88px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
-  border: 1px solid #8e8f99;
 }
 
 .customers-href {
@@ -444,6 +441,8 @@ button {
   width: 100%;
   height: 100%;
   border: 1px solid #8e8f99;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-href:hover,
@@ -519,7 +518,6 @@ button {
 .social-icons-footer {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-pages-footer {
@@ -530,6 +528,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-pages-footer:hover,
@@ -586,14 +585,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
 }
 
 .open-modal:hover,
@@ -701,6 +699,10 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.adress-elem-two {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* page-main-portfolio */
 
 .page-main-container-portfolio {
@@ -724,16 +726,10 @@ button {
 }
 
 .buttons-info {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.buttons-info:hover,
-.buttons-info:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-bt {
@@ -757,6 +753,7 @@ button {
   color: #ffffff;
   background-color: #404bbf;
   border: 1px solid transparent;
+  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons-info {
